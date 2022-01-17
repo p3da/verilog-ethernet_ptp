@@ -60,7 +60,7 @@ assign s_axis_tready = 1;
 assign output_fcs = fcs_reg;
 assign output_fcs_valid = fcs_valid_reg;
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),

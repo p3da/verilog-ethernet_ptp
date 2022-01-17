@@ -117,7 +117,7 @@ assign error_bad_fcs = error_bad_fcs_reg;
 
 wire last_cycle = state_reg == STATE_LAST;
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -133,7 +133,7 @@ eth_crc_8 (
     .state_out(crc_next0)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -149,7 +149,7 @@ eth_crc_16 (
     .state_out(crc_next1)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -165,7 +165,7 @@ eth_crc_24 (
     .state_out(crc_next2)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -181,7 +181,7 @@ eth_crc_32 (
     .state_out(crc_next3)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),

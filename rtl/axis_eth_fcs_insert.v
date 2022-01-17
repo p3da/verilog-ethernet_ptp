@@ -95,7 +95,7 @@ assign s_axis_tready = s_axis_tready_reg;
 
 assign busy = busy_reg;
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),

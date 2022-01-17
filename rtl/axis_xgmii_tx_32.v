@@ -177,7 +177,7 @@ assign m_axis_ptp_ts_valid = PTP_TS_ENABLE || PTP_TAG_ENABLE ? m_axis_ptp_ts_val
 assign start_packet = start_packet_reg;
 assign error_underflow = error_underflow_reg;
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -193,7 +193,7 @@ eth_crc_8 (
     .state_out(crc_next0)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -209,7 +209,7 @@ eth_crc_16 (
     .state_out(crc_next1)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -225,7 +225,7 @@ eth_crc_24 (
     .state_out(crc_next2)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),

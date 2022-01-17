@@ -99,7 +99,7 @@ assign query_response_mac = query_response_mac_reg;
 
 assign write_request_ready = write_request_ready_reg;
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),
@@ -115,7 +115,7 @@ rd_hash (
     .state_out(query_request_hash)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(32),
     .LFSR_POLY(32'h4c11db7),
     .LFSR_CONFIG("GALOIS"),

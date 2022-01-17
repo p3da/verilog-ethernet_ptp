@@ -130,7 +130,7 @@ generate
 
 endgenerate
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(58),
     .LFSR_POLY(58'h8000000001),
     .LFSR_CONFIG("FIBONACCI"),
@@ -146,7 +146,7 @@ scrambler_inst (
     .state_out(scrambler_state)
 );
 
-lfsr #(
+ve_lfsr #(
     .LFSR_WIDTH(31),
     .LFSR_POLY(31'h10000001),
     .LFSR_CONFIG("FIBONACCI"),
